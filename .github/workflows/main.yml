@@ -1,0 +1,26 @@
+name: Inline Message Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  send-inline-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send Inline Telegram Message
+        uses: cbrgm/telegram-github-action@v1
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          thread-id: ${{ secrets.TELEGRAM_THREAD_ID }}
+          message: |
+            🚀 Якийсь хуєсос запушив в мейн блять!
+            Коміт: ${{ github.sha }}
+            Хто: ${{ github.actor }}
+            Репозиторій: ${{ github.repository }}
+            Чо написав підор: ${{ github.event.head_commit.message }}
+            🔗 https://github.com/${{ github.repository }}/commit/${{ github.sha }}
