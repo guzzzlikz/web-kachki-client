@@ -18,7 +18,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           thread-id: ${{ secrets.TELEGRAM_THREAD_ID }}
           message: |
-            🚀 Якийсь хуєсос запушив в мейн блять!
+            🚀 Якийсь хуєсос запушив в фронт блять!
             Коміт: ${{ github.sha }}
             Хто: ${{ github.actor }}
             Репозиторій: ${{ github.repository }}
