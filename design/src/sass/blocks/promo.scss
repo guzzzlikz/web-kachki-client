@@ -1,9 +1,9 @@
-@use "/design/src/sass/basic/variabels.scss" as *;
+@use "/src/sass/basic/variabels.scss" as *;
 
 .promo {
     &__wrapper {
         position: relative;
-        background: url("/design/src/img/bg/bg.png") center center / cover no-repeat;
+        background: url("/src/img/bg/bg.png") center center / cover no-repeat;
         padding: 180px 0 280px 0;
     }
 
