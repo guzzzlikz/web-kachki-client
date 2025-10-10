@@ -34,3 +34,8 @@ html {
     font-family: "Roboto", sans-serif; //задати правильний текст
     scroll-behavior: smooth;
 }
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
