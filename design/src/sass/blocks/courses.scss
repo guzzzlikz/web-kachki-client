@@ -1,0 +1,89 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.courses {
+    padding: 101px 0 138px 0;
+    background: rgba(242, 242, 242, 1);
+
+    &__title {
+        color: $black;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+        margin-top: 21px;
+    }
+
+    &__wrapper {
+        margin-top: 81px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: clamp(20px, 9vw, 210px);
+        row-gap: 60px;
+        justify-self: center;
+    }
+
+    &__item {
+        width: 400px;
+        height: 500px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 1);
+
+        &-wrapper {
+            padding: 20px 25px 25px 25px;
+        }
+    }
+
+    &__img {
+        border-radius: 10px 10px 0 0;
+        height: 229px;
+        width: 400px;
+        object-fit: cover;
+    }
+
+    &__item-title {
+        color: $ametist;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__descr {
+        margin-top: 21px;
+        color: rgba(163, 163, 163, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    &__btn {
+        margin-top: 86px;
+        padding: 9px 120px;
+        box-sizing: border-box;
+        border: 1px dashed $chaorit;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 1);
+        color: $chaorit;
+    }
+
+    &__more {
+        display: block;
+        margin: 105px auto 0 auto;
+        background-color: $chaorit;
+        color: $white;
+        padding: 8px 335px;
+        cursor: pointer;
+
+        span {
+            margin-left: 20px;
+        }
+    }
+}
