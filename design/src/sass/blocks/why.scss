@@ -1,0 +1,57 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.why {
+    background-color: rgba(92, 77, 125, 1);
+    padding: 100px 0;
+
+    &__title {
+        color: $white;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__wrapper {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        #why__item-move1 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+
+        #why__item-move2 {
+            grid-row: 3 / 4;
+        }
+    }
+
+    &__item {
+        display: flex;
+        max-width: 810px;
+        background-color: $white;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    &__img {
+        width: 294px;
+    }
+
+    &__subtitle {
+        color: $ametist;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__text {
+        margin-top: 40px;
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+}

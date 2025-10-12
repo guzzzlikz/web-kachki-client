@@ -11,6 +11,12 @@
       "css": "right-small",
       "code": 59392,
       "src": "typicons"
+    },
+    {
+      "uid": "37910a1398001a5ccb541cb2a253a2c7",
+      "css": "right-open",
+      "code": 61446,
+      "src": "mfglabs"
     }
   ]
 }

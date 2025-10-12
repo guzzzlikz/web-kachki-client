@@ -1,0 +1,92 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.coaches {
+    background: rgba(242, 242, 242, 1);
+    padding: 100px 0 134px 0;
+
+    &__title {
+        color: $black;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__wrapper {
+        margin-top: 50px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        background: rgba(255, 255, 255, 1);
+        padding: 10px 35px 10px 10px;
+        gap: 10px;
+        max-width: 800px;
+        height: 200px;
+        transition: all 0.3s;
+
+        &:hover {
+            .coaches__rectagle {
+                background: linear-gradient(270.00deg, rgba(114, 60, 112, 1), rgba(255, 255, 255, 0) 100%);
+            }
+        }
+    }
+
+    &__descr {
+        width: 450px;
+    }
+
+    &__img {
+        width: 160px;
+        object-fit: cover;
+    }
+
+    &__subtitle {
+        color: rgba(0, 0, 0, 1);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: left;
+    }
+
+    &__text {
+        margin-top: 15px;
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__icon {
+        margin-left: 60px;
+        margin-top: 40px;
+        width: 50px;
+        height: 100px;
+
+        span {
+            display: block;
+            width: 60px;
+            height: 3px;
+            border-radius: 25px;
+            background-color: $black;
+
+            &:nth-child(1) {
+                transform: rotate(50deg) translateX(10px) translateY(25px);
+            }
+
+            &:nth-child(2) {
+                transform: rotate(-45deg) translateX(-56px) translateY(35px);
+            }
+        }
+    }
+
+    &__rectagle {
+        width: 150px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.3s;
+    }
+}
