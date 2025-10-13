@@ -14,6 +14,11 @@
 
     &__wrapper {
         margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 30px;
+        justify-self: center;
     }
 
     &__item {
@@ -24,11 +29,10 @@
         gap: 10px;
         max-width: 800px;
         height: 200px;
-        transition: all 0.3s;
 
         &:hover {
             .coaches__rectagle {
-                background: linear-gradient(270.00deg, rgba(114, 60, 112, 1), rgba(255, 255, 255, 0) 100%);
+                opacity: 1;
             }
         }
     }
@@ -69,7 +73,7 @@
             width: 60px;
             height: 3px;
             border-radius: 25px;
-            background-color: $black;
+            background-color: $ametist;
 
             &:nth-child(1) {
                 transform: rotate(50deg) translateX(10px) translateY(25px);
@@ -87,6 +91,8 @@
         position: absolute;
         right: 0;
         top: 0;
-        transition: all 0.3s;
+        transition: all 0.6s;
+        background: linear-gradient(270.00deg, rgba(114, 60, 112, 1), rgba(255, 255, 255, 0) 100%);
+        opacity: 0;
     }
 }

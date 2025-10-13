@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variabels.scss" as *;
 
 .why {
-    background-color: rgba(92, 77, 125, 1);
+    background-color: $purple;
     padding: 100px 0;
 
     &__title {

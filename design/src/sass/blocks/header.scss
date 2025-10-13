@@ -48,6 +48,7 @@
 
 
     &__button {
+
         &-in {
             padding: 11px 25px;
             color: $white;
@@ -72,6 +73,26 @@
             background-color: $black;
             cursor: pointer;
             transition: all 0.4s;
+        }
+    }
+
+    &__user {
+        display: none; // поміняти на flex, а &__buttons  зробити none
+        margin-left: 57px;
+        align-items: center;
+        gap: 30px;
+
+        &-name {
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &-photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
         }
     }
 }
