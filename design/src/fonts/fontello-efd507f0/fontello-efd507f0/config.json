@@ -13,10 +13,16 @@
       "src": "typicons"
     },
     {
-      "uid": "37910a1398001a5ccb541cb2a253a2c7",
-      "css": "right-open",
-      "code": 61446,
-      "src": "mfglabs"
+      "uid": "0cd2582b8c93719d066ee0affd02ac78",
+      "css": "sort-alt-up",
+      "code": 61792,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "221947bea81f49a11b863c686a7bd235",
+      "css": "search",
+      "code": 59393,
+      "src": "websymbols"
     }
   ]
 }

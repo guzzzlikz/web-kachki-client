@@ -1,0 +1,107 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+
+.coursesList {
+    background: rgba(242, 242, 242, 1);
+    padding-bottom: 100px;
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 80px;
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__descr {
+        margin-left: 10px;
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        width: 91px;
+        padding: 3px 10px 3px 2px;
+        border: none;
+        background: rgba(255, 255, 255, 1);
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    &__checkbox {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $black;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+
+        &:checked::after {
+            content: "✓";
+            color: $white;
+            font-size: 17px;
+            position: absolute;
+            top: 0px;
+            left: 2px;
+        }
+
+        &:checked {
+            background-color: $purple;
+        }
+    }
+
+    &__form {
+        position: relative;
+    }
+
+    &__input {
+        width: 500px;
+        height: 50px;
+        border-radius: 25px;
+        padding: 6px 25px 6px;
+        border: none;
+        background: rgba(255, 255, 255, 1);
+        position: relative;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn-search {
+        border-radius: 25px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        position: absolute;
+        right: 5px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+        background: rgba(255, 255, 255, 1);
+
+        span {
+            font-size: 20px;
+        }
+    }
+}
