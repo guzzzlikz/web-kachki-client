@@ -1,6 +1,6 @@
 @use "/src/sass/libs/modern-normalize.css";
 @use "/src/sass/basic/basic.scss";
-@use "/src/fonts/fontello-efd507f0/fontello-efd507f0/css/fontello.css";
+@use "/src/fonts/fontello-14209e23/fontello-14209e23/css/fontello.css";
 
 
 @use "/src/sass/blocks/header.scss";
@@ -9,5 +9,9 @@
 @use "/src/sass/blocks/why.scss";
 @use "/src/sass/blocks/coaches.scss";
 @use "/src/sass/blocks/newsletter.scss";
+
 @use "/src/sass/blocks/course.scss";
+
 @use "/src/sass/blocks/coursesList.scss";
+
+@use "/src/sass/blocks/buyedCourse.scss";
