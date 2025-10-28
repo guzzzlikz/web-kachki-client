@@ -2,6 +2,13 @@
 .icon-right-small:before { content: '\e800'; } /* '' */
 .icon-search:before { content: '\e801'; } /* '' */
 .icon-video:before { content: '\e802'; } /* '' */
+.icon-plus-circle:before { content: '\e803'; } /* '' */
+.icon-cog:before { content: '\e804'; } /* '' */
+.icon-dot-3:before { content: '\e805'; } /* '' */
+.icon-cancel:before { content: '\e806'; } /* '' */
+.icon-pencil:before { content: '\e807'; } /* '' */
+.icon-eye:before { content: '\e808'; } /* '' */
+.icon-eye-off:before { content: '\e809'; } /* '' */
 .icon-sort-alt-up:before { content: '\f160'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-telegram:before { content: '\f2c6'; } /* '' */

@@ -96,3 +96,273 @@
         opacity: 0;
     }
 }
+
+.singIn {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.01);
+    position: absolute;
+    top: 120px;
+    z-index: 100500;
+
+    &__modal {
+        padding: 50px 0 59px 0;
+        margin: 100px auto 0 auto;
+        width: 700px;
+        height: 530px;
+        background-color: rgba(92, 77, 125, 1)
+    }
+
+    &__title {
+        color: $white;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__form {
+        margin-top: 40px;
+    }
+
+    &__fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0 150px;
+
+        label {
+            position: relative;
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+
+
+            &:nth-child(1) {
+                margin: 0;
+                display: block;
+            }
+
+            span {
+                position: absolute;
+                bottom: 13px;
+                right: 5px;
+                color: rgba(92, 77, 125, 1);
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    &__text {
+        margin-top: 10px;
+        padding: 10px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background: $white;
+        font-size: 20px;
+
+        &:focus {
+            outline: 0;
+            border: 0
+        }
+
+    }
+
+    &__password {
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 40px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background: $white;
+        font-size: 20px;
+
+        &:focus {
+            outline: 0;
+            border: 0
+        }
+    }
+
+    &__submit {
+        margin: 80px auto 0 auto;
+        display: block;
+        border-radius: 5px;
+        width: 180px;
+        height: 40px;
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        background-color: $chaorit;
+        border: none;
+    }
+
+}
+
+.signUp {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.01);
+    position: absolute;
+    top: 120px;
+    z-index: 100500;
+
+    &__modal {
+        padding: 67px 150px 59px 150px;
+        width: 1040px;
+        height: 665px;
+        background-color: rgba(92, 77, 125, 1);
+        margin: 100px auto 0 auto;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__form {
+        margin-top: 40px;
+
+    }
+
+    &__fieldset1 {
+        border: none;
+        display: flex;
+        gap: 90px;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__login-label {
+        display: flex;
+        flex-direction: column;
+        gap: 10;
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__login {
+        font-size: 20px;
+        width: 325px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__email-label {
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10;
+    }
+
+    &__email {
+        font-size: 20px;
+        width: 325px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__fieldset2 {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        margin: 30px 0 0 0;
+        gap: 30px;
+    }
+
+    &__password-label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__password {
+        height: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__password-confirm-label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__password-confirm {
+        height: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__create {
+        color: $white;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        display: block;
+        margin: 60px auto 0 auto;
+        width: 240px;
+        height: 50px;
+        background-color: $chaorit;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+}

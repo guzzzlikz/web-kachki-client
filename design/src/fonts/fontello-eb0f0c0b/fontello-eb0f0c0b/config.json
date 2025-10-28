@@ -53,6 +53,48 @@
       "css": "facebook-squared",
       "code": 62216,
       "src": "fontawesome"
+    },
+    {
+      "uid": "a66e72da83c98248ae3ef43808efc452",
+      "css": "plus-circle",
+      "code": 59395,
+      "src": "websymbols"
+    },
+    {
+      "uid": "e99461abfef3923546da8d745372c995",
+      "css": "cog",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d10920db2e79c997c5e783279291970c",
+      "css": "dot-3",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59398,
+      "src": "entypo"
+    },
+    {
+      "uid": "0299bec28699eedda42f46c77239393e",
+      "css": "pencil",
+      "code": 59399,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "c5fd349cbd3d23e4ade333789c29c729",
+      "css": "eye",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7fd683b2c518ceb9e5fa6757f2276faa",
+      "css": "eye-off",
+      "code": 59401,
+      "src": "fontawesome"
     }
   ]
 }

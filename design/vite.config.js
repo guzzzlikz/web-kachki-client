@@ -9,9 +9,11 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-
+                course: resolve(__dirname, 'course.html'),
+                coursesList: resolve(__dirname, 'coursesList.html'),
+                buyedCourse: resolve(__dirname, 'buyedCourse.html'),
+                account: resolve(__dirname, 'accoint.html')
             },
         },
     },
 });
-

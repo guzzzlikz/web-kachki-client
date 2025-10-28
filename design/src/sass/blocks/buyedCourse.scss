@@ -48,6 +48,8 @@
             font-size: 24px;
             font-weight: 400;
             line-height: 100%;
+
+
         }
 
         &-descr {
@@ -64,6 +66,10 @@
         font-weight: 400;
         line-height: 100%;
         margin-top: 33px;
+
+        span {
+            font-size: 25px;
+        }
     }
 
     &__descr {
@@ -76,7 +82,7 @@
 
     &__list {
         padding-right: 10px;
-        max-height: 810px;
+        max-height: 750px;
         overflow-y: auto;
         background: transparent;
 
@@ -125,5 +131,24 @@
         line-height: 100%;
         letter-spacing: 0%;
         text-align: left;
+        margin-top: 4px;
+    }
+
+    .btn-add {
+        width: 300px;
+        height: 50px;
+        justify-self: end;
+        margin-top: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: $chaorit;
+        color: $white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+
+        span {
+            margin-right: 5px;
+        }
     }
 }
