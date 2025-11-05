@@ -1,0 +1,160 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back"
+  },
+  "nav": {
+    "courses": "Courses",
+    "about": "About us",
+    "contacts": "Contacts",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "account": "Account",
+    "logout": "Logout",
+    "menu": "Navigation Menu",
+    "menuDescription": "Main navigation menu"
+  },
+  "home": {
+    "title": "Movement is LIFE",
+    "subtitle": "ARES",
+    "heroButton1": "Let's start training",
+    "heroButton2": "Browse Courses",
+    "featuredCourses": {
+      "title": "Featured Courses",
+      "description": "Discover our most popular fitness programs designed by expert trainers"
+    },
+    "whyUs": {
+      "title": "Why us?",
+      "feature1": {
+        "title": "Immersive self-corrections",
+        "description": "Live classes, recorded sessions, and on-demand content. Receive expert feedback on your form and technique to prevent injuries and maximize results."
+      },
+      "feature2": {
+        "title": "Immersive self-corrections",
+        "description": "Expert trainers track your performance and adjust your plan. Personalized training adapts to your progress for optimal results."
+      },
+      "feature3": {
+        "title": "Immersive self-corrections",
+        "description": "Join our community of dedicated athletes. Share experiences, celebrate wins, and stay motivated together on your fitness journey."
+      }
+    },
+    "coaches": {
+      "title": "Coaches recommended",
+      "seeMore": "See more"
+    },
+    "newsletter": {
+      "title": "Get our free newsletter",
+      "description": "We will notify you about news on our site, as well as when new courses appear",
+      "placeholder": "Enter a valid email address",
+      "button": "Subscribe",
+      "disclaimer": "You can unsubscribe from our emails at any time. You can also familiarize yourself with our privacy policy."
+    }
+  },
+  "courses": {
+    "title": "Courses",
+    "search": "Search courses",
+    "filters": "Filters:",
+    "free": "Free",
+    "paid": "Paid",
+    "notFound": "No courses found",
+    "notFoundDescription": "Try changing filters or search query",
+    "learnMore": "Learn more"
+  },
+  "courseDetail": {
+    "videos": "Videos",
+    "duration": "Duration",
+    "level": "Level",
+    "type": "Type",
+    "trainer": "Trainer",
+    "free": "Free",
+    "buy": "Buy course",
+    "enroll": "Enroll",
+    "processing": "Processing...",
+    "videoPlayer": "Video player",
+    "videoDescription": "Intro video"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In",
+      "login": "Login",
+      "password": "Password",
+      "button": "Log In",
+      "processing": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up"
+    },
+    "signUp": {
+      "title": "Sign up",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "userType": "User type",
+      "user": "User",
+      "trainer": "Trainer",
+      "button": "Create Account",
+      "processing": "Creating...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign In"
+    }
+  },
+  "account": {
+    "title": "Account",
+    "contacts": "Contacts:",
+    "myCourses": "My Courses",
+    "noCourses": "No courses yet",
+    "deleteAccount": "Delete Account",
+    "deleteConfirm": "Are you sure you want to delete your account? This action cannot be undone.",
+    "deleteProcessing": "Deleting..."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "newsletter": {
+      "title": "Get our free newsletter",
+      "description": "We will notify you about news on our site, as well as when new courses appear",
+      "email": "Email",
+      "placeholder": "Enter a valid email address",
+      "button": "Subscribe",
+      "processing": "Subscribing...",
+      "disclaimer": "You can unsubscribe from our emails at any time. You can also familiarize yourself with our privacy policy."
+    }
+  },
+  "about": {
+    "title": "About us",
+    "description": "ARES - Your fitness journey starts here",
+    "content": "ARES is your premier destination for fitness excellence. We bring together world-class trainers, innovative workout programs, and a supportive community to help you achieve your fitness goals. Our platform combines cutting-edge technology with proven training methods to deliver results that transform lives."
+  },
+  "footer": {
+    "courses": "Courses",
+    "allCourses": "All Courses",
+    "aboutUs": "About us",
+    "about": "About",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "notFound": {
+    "title": "404",
+    "description": "Page not found",
+    "backHome": "Back to Home"
+  },
+  "errors": {
+    "courseLoad": "Error loading course",
+    "coursesLoad": "Error loading courses",
+    "profileDelete": "Error deleting profile",
+    "purchaseFailed": "Purchase failed"
+  },
+  "success": {
+    "newsletter": "Successfully subscribed to newsletter!",
+    "purchase": "Course purchased successfully!",
+    "delete": "Profile deleted successfully"
+  }
+}
+
