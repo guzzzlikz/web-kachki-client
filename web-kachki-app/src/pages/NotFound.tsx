@@ -1,6 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -24,20 +23,17 @@ const NotFound = () => {
       />
       <Header />
       
-      <main className="flex-1 flex items-center justify-center bg-background px-4">
-        <div className="text-center max-w-2xl">
-          <h1 className="mb-6 text-6xl font-bold">{t('notFound.description')}</h1>
-          
-          <div className="mb-8 flex items-center justify-center gap-8 text-9xl font-black">
-            <span className="text-primary">{t('notFound.title')}</span>
-            <div className="relative">
-              <span className="text-primary">0</span>
-              <Dumbbell className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-20 w-20 text-accent" />
-            </div>
-            <span className="text-primary">{t('notFound.title')}</span>
+      <main className="flex-1 flex items-center justify-center bg-background px-4 pb-20">
+        <div className="text-center max-w-4xl w-full">
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/404.svg" 
+              alt="404 Page Not Found" 
+              className="w-full max-w-2xl h-auto"
+            />
           </div>
           
-          <Button asChild size="lg" className="rounded-full">
+          <Button asChild size="lg" className="rounded-full mb-16">
             <Link to="/">{t('notFound.backHome')}</Link>
           </Button>
         </div>
