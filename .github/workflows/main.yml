@@ -18,9 +18,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           thread-id: ${{ secrets.TELEGRAM_THREAD_ID }}
           message: |
-            🚀 Якийсь хуєсос запушив в фронт блять!
+            🚀 Якийсь юро запушив в фронт!
             Коміт: ${{ github.sha }}
             Хто: ${{ github.actor }}
             Репозиторій: ${{ github.repository }}
-            Чо написав підор: ${{ github.event.head_commit.message }}
+            Чо написав бро: ${{ github.event.head_commit.message }}
             🔗 https://github.com/${{ github.repository }}/commit/${{ github.sha }}
