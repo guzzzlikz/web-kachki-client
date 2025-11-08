@@ -135,6 +135,7 @@ const Home = () => {
             <motion.img
               src={heroRunner}
               alt="Athlete running"
+              id="woman-running"
               className="rounded-2xl shadow-2xl w-full h-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
