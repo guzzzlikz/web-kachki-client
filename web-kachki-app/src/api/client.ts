@@ -30,11 +30,29 @@ apiClient.interceptors.response.use(
       // Token expired or invalid
       localStorage.removeItem('auth_token');
       localStorage.removeItem('refresh_token');
-      window.location.href = '/sign-in';
+      // Не перенаправляємо автоматично, щоб не перервати процес логіну
+      if (window.location.pathname !== '/sign-in' && window.location.pathname !== '/sign-up') {
+        window.location.href = '/sign-in';
+      }
+    }
+    
+    // Обробка різних форматів помилок від сервера
+    let errorMessage = 'An error occurred';
+    if (error.response?.data) {
+      // Якщо сервер повертає рядок (наприклад, "Invalid email or password")
+      if (typeof error.response.data === 'string') {
+        errorMessage = error.response.data;
+      } 
+      // Якщо сервер повертає об'єкт з полем message
+      else if ((error.response.data as any)?.message) {
+        errorMessage = (error.response.data as any).message;
+      }
+    } else if (error.message) {
+      errorMessage = error.message;
     }
     
     const apiError: ApiError = {
-      message: (error.response?.data as any)?.message || error.message || 'An error occurred',
+      message: errorMessage,
       code: (error.response?.data as any)?.code,
       status: error.response?.status,
       errors: (error.response?.data as any)?.errors,

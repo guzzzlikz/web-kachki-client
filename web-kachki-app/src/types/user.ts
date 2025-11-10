@@ -24,9 +24,11 @@ export interface User {
 }
 
 export interface RegisterData {
+  id: number;
   email: string;
   name: string;
   password: string;
+  type?: UserType;
 }
 
 export interface LoginData {

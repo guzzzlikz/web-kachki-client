@@ -43,12 +43,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (data: LoginData) => {
     try {
       const token = await apiLogin(data);
+      if (!token) {
+        throw new Error('Token not received');
+      }
       const userId = await getId(token);
       const userData = await getUserInfo(userId);
       setUser(userData);
       toast.success('Успішний вхід!');
     } catch (error: any) {
-      toast.error(error.message || 'Помилка входу');
+      console.error('Login error in AuthContext:', error);
+      const errorMessage = error?.message || error?.response?.data || 'Помилка входу';
+      toast.error(errorMessage);
       throw error;
     }
   };

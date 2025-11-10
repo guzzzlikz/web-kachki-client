@@ -18,6 +18,7 @@ const CourseDetail = lazy(() => import("./pages/CourseDetail"));
 const SignIn = lazy(() => import("./pages/SignIn"));
 const SignUp = lazy(() => import("./pages/SignUp"));
 const Account = lazy(() => import("./pages/Account"));
+const EditProfile = lazy(() => import("./pages/EditProfile"));
 const About = lazy(() => import("./pages/About"));
 const Contacts = lazy(() => import("./pages/Contacts"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -49,7 +50,12 @@ const App = () => (
           <TooltipProvider>
             <Toaster />
             <Sonner />
-            <BrowserRouter>
+            <BrowserRouter
+              future={{
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+              }}
+            >
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
                   <Route path="/" element={<Home />} />
@@ -62,6 +68,14 @@ const App = () => (
                     element={
                       <ProtectedRoute>
                         <Account />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/account/edit"
+                    element={
+                      <ProtectedRoute>
+                        <EditProfile />
                       </ProtectedRoute>
                     }
                   />

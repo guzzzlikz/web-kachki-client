@@ -15,6 +15,8 @@ import { AnimatedButton } from "@/components/AnimatedButton";
 import { useAuth } from "@/contexts/AuthContext";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { generateUserId } from "@/api/auth";
+import { UserType } from "@/types";
 
 const signUpSchema = z
   .object({
@@ -51,10 +53,18 @@ const SignUp = () => {
   const onSubmit = async (data: SignUpForm) => {
     setIsLoading(true);
     try {
+      // Генеруємо ID користувача на клієнті
+      const userId = generateUserId();
+      
+      // Маппимо user/trainer на UserType
+      const userType = data.userType === "trainer" ? UserType.TEACHER : UserType.USER;
+      
       await register({
+        id: userId,
         email: data.email,
         name: data.username,
         password: data.password,
+        type: userType,
       });
       navigate("/");
     } catch (error) {
@@ -90,11 +100,11 @@ const SignUp = () => {
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   {[
-                    { name: 'username', labelKey: 'auth.signUp.name', placeholder: 'Example', delay: 0.2 },
-                    { name: 'email', labelKey: 'auth.signUp.email', placeholder: 'Example@mail.example', delay: 0.3 },
-                    { name: 'password', labelKey: 'auth.signUp.password', placeholder: '••••••••••••••••', delay: 0.4, type: 'password' },
-                    { name: 'confirmPassword', labelKey: 'auth.signUp.confirmPassword', placeholder: '••••••••••••••••', delay: 0.5, type: 'password' },
-                  ].map(({ name, labelKey, placeholder, delay, type }) => (
+                    { name: 'username', labelKey: 'auth.signUp.name', placeholder: 'Example', delay: 0.2, autocomplete: 'username' },
+                    { name: 'email', labelKey: 'auth.signUp.email', placeholder: 'Example@mail.example', delay: 0.3, autocomplete: 'email' },
+                    { name: 'password', labelKey: 'auth.signUp.password', placeholder: '••••••••••••••••', delay: 0.4, type: 'password', autocomplete: 'new-password' },
+                    { name: 'confirmPassword', labelKey: 'auth.signUp.confirmPassword', placeholder: '••••••••••••••••', delay: 0.5, type: 'password', autocomplete: 'new-password' },
+                  ].map(({ name, labelKey, placeholder, delay, type, autocomplete }) => (
                     <motion.div
                       key={name}
                       initial={{ opacity: 0, x: -20 }}
@@ -112,7 +122,12 @@ const SignUp = () => {
                                 whileFocus={{ scale: 1.02 }}
                                 transition={{ duration: 0.2 }}
                               >
-                                <Input type={type || 'text'} placeholder={placeholder} {...field} />
+                                <Input 
+                                  type={type || 'text'} 
+                                  placeholder={placeholder} 
+                                  autoComplete={autocomplete}
+                                  {...field} 
+                                />
                               </motion.div>
                             </FormControl>
                             <FormMessage />

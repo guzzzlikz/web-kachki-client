@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 const signInSchema = z.object({
-  login: z.string().min(3, "Логін повинен містити мінімум 3 символи"),
+  email: z.string().email("Невірний формат email"),
   password: z.string().min(6, "Пароль повинен містити мінімум 6 символів"),
 });
 
@@ -33,7 +33,7 @@ const SignIn = () => {
   const form = useForm<SignInForm>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
-      login: "",
+      email: "",
       password: "",
     },
   });
@@ -41,7 +41,10 @@ const SignIn = () => {
   const onSubmit = async (data: SignInForm) => {
     setIsLoading(true);
     try {
-      await login(data as LoginData);
+      await login({
+        email: data.email,
+        password: data.password,
+      });
       navigate("/");
     } catch (error) {
       // Error is handled by AuthContext
@@ -82,7 +85,7 @@ const SignIn = () => {
                   >
                     <FormField
                       control={form.control}
-                      name="login"
+                      name="email"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>{t('auth.signIn.login')}</FormLabel>
@@ -91,7 +94,12 @@ const SignIn = () => {
                               whileFocus={{ scale: 1.02 }}
                               transition={{ duration: 0.2 }}
                             >
-                              <Input placeholder="Example" {...field} />
+                              <Input 
+                                type="email"
+                                placeholder="Example@mail.example" 
+                                autoComplete="email"
+                                {...field} 
+                              />
                             </motion.div>
                           </FormControl>
                           <FormMessage />
@@ -116,7 +124,12 @@ const SignIn = () => {
                               whileFocus={{ scale: 1.02 }}
                               transition={{ duration: 0.2 }}
                             >
-                              <Input type="password" placeholder="••••••••••••••••" {...field} />
+                              <Input 
+                                type="password" 
+                                placeholder="••••••••••••••••" 
+                                autoComplete="current-password"
+                                {...field} 
+                              />
                             </motion.div>
                           </FormControl>
                           <FormMessage />

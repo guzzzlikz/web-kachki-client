@@ -1,22 +1,30 @@
 import apiClient from './client';
 import { Lesson } from '@/types/lesson';
 
-export const uploadVideo = async (
+// Генерує URL для завантаження відео
+export const generateVideoUrl = async (
   courseId: number,
   lessonId: number,
-  file: File
-): Promise<Lesson> => {
-  const formData = new FormData();
-  formData.append('file', file);
-  
-  const response = await apiClient.post<Lesson>(
-    `/courses/${courseId}/${lessonId}/upload`,
-    formData,
-    {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    }
+  title: string,
+  type: string
+): Promise<string> => {
+  const response = await apiClient.post<string>(
+    `/courses/${courseId}/${lessonId}/generateUrl`,
+    { title, type }
+  );
+  return response.data;
+};
+
+// Завершує завантаження відео (встановлює ім'я файлу в урок)
+export const finishVideoUpload = async (
+  courseId: number,
+  lessonId: number,
+  title: string,
+  type: string
+): Promise<string> => {
+  const response = await apiClient.post<string>(
+    `/courses/${courseId}/${lessonId}/finish`,
+    { title, type }
   );
   return response.data;
 };

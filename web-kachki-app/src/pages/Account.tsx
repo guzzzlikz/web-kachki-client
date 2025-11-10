@@ -55,11 +55,15 @@ const Account = () => {
                       {user?.name?.charAt(0).toUpperCase() || "U"}
                     </AvatarFallback>
                   </Avatar>
-                  <Link to="/account/edit">
-                    <Button size="icon" variant="ghost">
+                  <Button 
+                    size="icon" 
+                    variant="ghost"
+                    asChild
+                  >
+                    <Link to="/account/edit">
                       <Edit className="h-5 w-5" />
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
 
                 <h2 className="text-2xl font-bold mb-1">{user?.name || "User"}</h2>
@@ -98,7 +102,76 @@ const Account = () => {
                 <TabsContent value="contacts" className="space-y-4">
                   <Card className="bg-card">
                     <CardContent className="p-6">
-                      <p className="text-muted-foreground">Contact information will be displayed here.</p>
+                      <div className="space-y-4">
+                        <div>
+                          <p className="text-sm font-medium text-muted-foreground mb-2">Email</p>
+                          <p className="text-sm">{user?.email || 'Не вказано'}</p>
+                        </div>
+                        {(user?.contacts?.instUrl || user?.contacts?.telegramUrl || user?.contacts?.facebookUrl || user?.contacts?.linkedInUrl) ? (
+                          <div className="space-y-3">
+                            <p className="text-sm font-medium text-muted-foreground mb-2">Соціальні мережі</p>
+                            {user.contacts.instUrl && (
+                              <div>
+                                <p className="text-xs text-muted-foreground mb-1">Instagram</p>
+                                <a 
+                                  href={user.contacts.instUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-primary hover:underline break-all"
+                                >
+                                  {user.contacts.instUrl}
+                                </a>
+                              </div>
+                            )}
+                            {user.contacts.facebookUrl && (
+                              <div>
+                                <p className="text-xs text-muted-foreground mb-1">Facebook</p>
+                                <a 
+                                  href={user.contacts.facebookUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-primary hover:underline break-all"
+                                >
+                                  {user.contacts.facebookUrl}
+                                </a>
+                              </div>
+                            )}
+                            {user.contacts.linkedInUrl && (
+                              <div>
+                                <p className="text-xs text-muted-foreground mb-1">LinkedIn</p>
+                                <a 
+                                  href={user.contacts.linkedInUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-primary hover:underline break-all"
+                                >
+                                  {user.contacts.linkedInUrl}
+                                </a>
+                              </div>
+                            )}
+                            {user.contacts.telegramUrl && (
+                              <div>
+                                <p className="text-xs text-muted-foreground mb-1">Telegram</p>
+                                <a 
+                                  href={user.contacts.telegramUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-primary hover:underline break-all"
+                                >
+                                  {user.contacts.telegramUrl}
+                                </a>
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <p className="text-sm text-muted-foreground">
+                            Соціальні мережі не додані. 
+                            <Link to="/account/edit" className="text-primary hover:underline ml-1">
+                              Додати
+                            </Link>
+                          </p>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 </TabsContent>
